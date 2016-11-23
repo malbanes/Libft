@@ -6,7 +6,7 @@
 /*   By: malbanes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/20 20:33:33 by malbanes          #+#    #+#             */
-/*   Updated: 2016/11/21 13:15:47 by malbanes         ###   ########.fr       */
+/*   Updated: 2016/11/23 16:46:41 by malbanes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,24 @@
 
 void	ft_putnbr(int n)
 {
-	long int div;
-	long int nb;
+	int div;
 
 	div = 1;
-	nb = n;
-	if (nb < 0)
+	if (n == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+		return ;
+	}
+	if (n < 0)
 	{
 		ft_putchar('-');
-		nb *= -1;
+		n *= -1;
 	}
-	while ((nb / div) >= 10)
+	while ((n / div) >= 10)
 		div *= 10;
 	while (div > 0)
 	{
-		ft_putchar((nb / div) % 10 + 48);
+		ft_putchar((n / div) % 10 + 48);
 		div /= 10;
 	}
 }

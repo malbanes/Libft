@@ -6,7 +6,7 @@
 /*   By: malbanes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 19:31:43 by malbanes          #+#    #+#             */
-/*   Updated: 2016/11/22 19:52:59 by malbanes         ###   ########.fr       */
+/*   Updated: 2016/11/23 16:56:55 by malbanes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 		while (s1[k] == s2[j])
 		{
 			if (s2[j + 1] == '\0' && (unsigned int)j + (unsigned int)i < len)
-				return ((char*)s1 +i);
+				return ((char*)s1 + i);
 			k++;
 			j++;
 		}
