@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malbanes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/20 20:05:21 by malbanes          #+#    #+#             */
-/*   Updated: 2016/11/23 18:39:32 by malbanes         ###   ########.fr       */
+/*   Created: 2016/11/25 14:28:54 by malbanes          #+#    #+#             */
+/*   Updated: 2016/11/25 14:28:56 by malbanes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+int		ft_recursive_factorial(int nb)
 {
-	size_t	i;
-	size_t	s1_end;
-
-	i = 0;
-	while (dst[i] && i < size)
-		i++;
-	s1_end = i;
-	while (src[i - s1_end] && i < size - 1)
-	{
-		dst[i] = src[i - s1_end];
-		i++;
-	}
-	if (s1_end < size)
-		dst[i] = '\0';
-	return (s1_end + ft_strlen(src));
+	if (nb >= 13 || nb < 0)
+		return (0);
+	if (nb <= 1)
+		return (1);
+	else
+		return (nb * ft_recursive_factorial(nb - 1));
 }

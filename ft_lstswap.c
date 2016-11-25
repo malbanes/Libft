@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_lstswap.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malbanes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/20 20:05:21 by malbanes          #+#    #+#             */
-/*   Updated: 2016/11/23 18:39:32 by malbanes         ###   ########.fr       */
+/*   Created: 2016/11/25 10:50:10 by malbanes          #+#    #+#             */
+/*   Updated: 2016/11/25 14:15:57 by malbanes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+void	ft_lstswap(t_list *lst, int m1, int m2)
 {
-	size_t	i;
-	size_t	s1_end;
+	t_list	*tmp;
+	t_list	*ma1;
+	t_list	*ma2;
+	t_list	*mb1;
+	t_list	*mb2;
 
-	i = 0;
-	while (dst[i] && i < size)
-		i++;
-	s1_end = i;
-	while (src[i - s1_end] && i < size - 1)
-	{
-		dst[i] = src[i - s1_end];
-		i++;
-	}
-	if (s1_end < size)
-		dst[i] = '\0';
-	return (s1_end + ft_strlen(src));
+	if (!lst)
+		return ;
+	ma1 = ft_lstnptr(lst, m1);
+	ma2 = ft_lstnptr(lst, m1 - 1);
+	mb1 = ft_lstnptr(lst, m2);
+	mb2 = ft_lstnptr(lst, m2 - 1);
+	tmp = ma1->next;
+	ma1->next = mb1->next;
+	mb1->next = tmp;
+	tmp = ma2->next;
+	ma2->next = mb2->next;
+	mb2->next = tmp;
 }

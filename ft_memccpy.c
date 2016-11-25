@@ -6,13 +6,13 @@
 /*   By: malbanes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/20 19:42:11 by malbanes          #+#    #+#             */
-/*   Updated: 2016/11/20 19:45:58 by malbanes         ###   ########.fr       */
+/*   Updated: 2016/11/23 17:57:35 by malbanes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	*ft_memccpy(void *restrict dst, const void *src, int c, size_t n)
 {
 	while (n--)
 	{

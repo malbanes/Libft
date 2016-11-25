@@ -6,7 +6,7 @@
 #    By: malbanes <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/20 18:02:04 by malbanes          #+#    #+#              #
-#    Updated: 2016/11/22 17:33:02 by malbanes         ###   ########.fr        #
+#    Updated: 2016/11/25 14:27:14 by malbanes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,15 @@ SRC =	ft_atoi.c\
 		ft_lstdel.c\
 		ft_lstdelone.c\
 		ft_lstiter.c\
-		ft_lstmap.c
+		ft_lstmap.c\
+		ft_swap.c\
+		ft_strndup.c\
+		ft_sqrt.c\
+		ft_recursive_factorial.c\
+		ft_strrev.c\
+		ft_lstprint.c\
+		ft_lstswap.c\
+		ft_lstnptr.c
 
 OBJ = $(SRC:.c=.o)
 
