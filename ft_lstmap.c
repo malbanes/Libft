@@ -6,7 +6,7 @@
 /*   By: malbanes <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/20 20:44:22 by malbanes          #+#    #+#             */
-/*   Updated: 2016/11/21 16:15:13 by malbanes         ###   ########.fr       */
+/*   Updated: 2016/11/25 16:09:29 by malbanes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ t_list			*ft_lstmap(t_list *lst, t_list *(*f) (t_list *elem))
 		new->next = ft_lstmap(lst->next, f);
 		return (new);
 	}
-	return (new);
+	return (NULL);
 }
