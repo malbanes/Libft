@@ -6,7 +6,7 @@
 #    By: malbanes <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/20 18:02:04 by malbanes          #+#    #+#              #
-#    Updated: 2016/11/25 14:27:14 by malbanes         ###   ########.fr        #
+#    Updated: 2017/02/16 15:30:40 by malbanes         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,7 +77,8 @@ SRC =	ft_atoi.c\
 		ft_strrev.c\
 		ft_lstprint.c\
 		ft_lstswap.c\
-		ft_lstnptr.c
+		ft_lstnptr.c\
+		get_next_line.c
 
 OBJ = $(SRC:.c=.o)
 
